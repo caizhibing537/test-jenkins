@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+  namespace: daocloud-argocd-test
+spec:
+  ports:
+    - name: tcp-80
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30352
+  selector:
+    app: my-app
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+
