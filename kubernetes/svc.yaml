@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx
-  namespace: daocloud-argocd-test
 spec:
   ports:
     - name: tcp-80
